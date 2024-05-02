@@ -3,7 +3,7 @@
     {
       "id": 1,
       "idUsuario": 3,
-      "transporte":"Metropolitano"
+      "transporte":"Metropolitano",
       "direccionOrigen": "Av. La Marina, San Miguel",
       "direccionDestino": "Av. Larco, Miraflores",
       "horaOrigen": "08:00",
@@ -13,7 +13,7 @@
     {
       "id": 2,
       "idUsuario": 4,
-      "transporte":"Corredor Azul"
+      "transporte":"Corredor Azul",
       "direccionOrigen": "Av. Universitaria, Comas",
       "direccionDestino": "Jirón de la Unión, Lima",
       "horaOrigen": "07:30",

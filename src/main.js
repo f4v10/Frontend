@@ -4,6 +4,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import PrimeVue from "primevue/config";
 
+
 createApp(App)
-    .use(PrimeVue, {ripple: true})
+    .use(PrimeVue, {ripple:true})
     .mount('#app')

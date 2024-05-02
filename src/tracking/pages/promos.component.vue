@@ -1,5 +1,7 @@
-<script setup>
-
+<script>
+export default {
+  name: "promos.component"
+}
 </script>
 
 <template>
