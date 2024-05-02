@@ -1,0 +1,78 @@
+{
+  "viajes": [
+    {
+      "id": 1,
+      "idUsuario": 3,
+      "transporte":"Metropolitano"
+      "direccionOrigen": "Av. La Marina, San Miguel",
+      "direccionDestino": "Av. Larco, Miraflores",
+      "horaOrigen": "08:00",
+      "horaDestino": "09:00",
+      "pasaje": 2.50
+    },
+    {
+      "id": 2,
+      "idUsuario": 4,
+      "transporte":"Corredor Azul"
+      "direccionOrigen": "Av. Universitaria, Comas",
+      "direccionDestino": "Jirón de la Unión, Lima",
+      "horaOrigen": "07:30",
+      "horaDestino": "08:45",
+      "pasaje": 3.00
+    }
+  ],
+  "promociones": [
+    {
+      "id": 1,
+      "imagen": "url_a_la_imagen_de_la_promocion.jpg",
+      "titulo": "20% descuento en pasajes de Metropolitano",
+      "descripcion": "Aprovecha el 20% de descuento en todos los pasajes del Metropolitano durante el mes de julio."
+    },
+    {
+      "id": 2,
+      "imagen": "url_a_la_imagen_de_la_promocion2.jpg",
+      "titulo": "Viaje gratis en tu cumpleaños",
+      "descripcion": "Regístrate y viaja gratis en cualquier transporte público en tu cumpleaños."
+    }
+  ],
+  "preguntas": [
+    {
+      "id": 1,
+      "idUsuario": 3,
+      "descripcion": "¿Cómo recargo mi tarjeta del Metropolitano online?"
+    },
+    {
+      "id": 2,
+      "idUsuario": 4,
+      "descripcion": "¿Dónde encuentro las rutas actualizadas del Corredor Azul?"
+    }
+  ],
+  "planes": [
+    {
+      "id": 1,
+      "titulo": "Plan Estándar"
+    },
+    {
+      "id": 2,
+      "titulo": "Plan Premium"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 3,
+      "nombres": "Carlos",
+      "apellidos": "Fernández",
+      "email": "carlosf@example.com",
+      "contrasena": "contrasena123",
+      "planId": 1
+    },
+    {
+      "id": 4,
+      "nombres": "Maria",
+      "apellidos": "Pérez",
+      "email": "mariap@example.com",
+      "contrasena": "contrasena321",
+      "planId": 2
+    }
+  ]
+}
