@@ -9,4 +9,27 @@ export class Trip{
         this.endDate = endDate;
         this.price = price;
     }
+    static fromDisplayableTrip(displayableTrip) {
+        return new Trip(
+            displayableTrip.id,
+            displayableTrip.idUser,
+            displayableTrip.type,
+            displayableTrip.origin,
+            displayableTrip.destination,
+            displayableTrip.startDate,
+            displayableTrip.endDate,
+            displayableTrip.price);
+    }
+    static toDisplayableTrip(trip) {
+        return {
+            id: trip.id,
+            idUser: trip.idUser,
+            type: trip.type,
+            origin: trip.origin,
+            destination: trip.destination,
+            startDate: trip.startDate,
+            endDate: trip.endDate,
+            price: trip.price
+        };
+    }
 }
