@@ -3,7 +3,9 @@
 
   export default {
     name: "App",
+    title: "TrackMyRoute2",
     components: {SideBar},
+
   }
 </script>
 
