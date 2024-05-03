@@ -1,5 +1,10 @@
-<script setup>
+<script >
   import SideBar from "@/public/pages/side-bar.component.vue";
+
+  export default {
+    name: "App",
+    components: {SideBar},
+  }
 </script>
 
 <template>
