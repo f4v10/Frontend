@@ -12,12 +12,12 @@ export class Promo {
             displayablePromo.title,
             displayablePromo.description);
     }
-static toDisplayablePromo(promo) {
-        return {
-            id: promo.id,
-            image: promo.image,
-            title: promo.title,
-            description: promo.description
-        };
-    }
+    static toDisplayablePromo(promo) {
+            return {
+                id: promo.id,
+                image: promo.image,
+                title: promo.title,
+                description: promo.description
+            };
+        }
 }
