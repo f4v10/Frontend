@@ -19,7 +19,7 @@ router.beforeEach((to,
                    from,
                    next) => {
     let baseTitle = 'TrackMyRoute1';
-    document.title = ${baseTitle} | ${to.meta['title']};
+    document.title = `${baseTitle} | ${to.meta['title']}`;
     next();
 });
 
