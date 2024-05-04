@@ -28,4 +28,7 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color:white;
+}
 </style>
