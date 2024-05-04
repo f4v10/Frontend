@@ -16,7 +16,6 @@
     </div>
     <div class="main-container">
 <!--      <search-routes></search-routes>-->
-      <pay-ticket></pay-ticket>
     </div>
   </div>
 </template>
