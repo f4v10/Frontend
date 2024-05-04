@@ -114,7 +114,9 @@
   font-size:25px;
   width:35%;
 }
-
+.icon-button:hover {
+  cursor: pointer;
+}
 </style>
 <script setup lang="ts">
 </script>
