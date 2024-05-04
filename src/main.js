@@ -1,4 +1,6 @@
-import './assets/main.css'
+
+
+    import './assets/main.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
@@ -17,7 +19,8 @@ import DataTable from "primevue/datatable";
 import Column from "primevue/column";
 import Button from "primevue/button";
 import Sidebar from "primevue/sidebar";
-
+import Card from "primevue/card"
+import InputText from 'primevue/inputtext';
 
 createApp(App)
     .use(PrimeVue, {ripple:true})
@@ -26,4 +29,6 @@ createApp(App)
     .component('pv-button',Button)
     .component('pv-column', Column)
     .component('pv-sidebar', Sidebar)
+    .component('pv-card',Card)
+    .component('pv-inputtext',InputText)
     .mount('#app')
