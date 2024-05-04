@@ -11,8 +11,8 @@ export default {
         {label:'Pagar pasaje', to: '/promos'},
         {label:'Promociones', to: '/promos'},
         {label:'Historial de viajes', to: '/history'},
-        {label:'Soporte y ayuda', to: '/promos'},
-        {label:'Configuración', to: '/promos'},
+        {label:'Soporte y ayuda', to: '/support'},
+        {label:'Configuración', to: '/config'},
       ]
     };
   },
