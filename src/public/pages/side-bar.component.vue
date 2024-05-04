@@ -32,12 +32,12 @@ export default {
       </template>
       <ul class="p-list-none">
         <router-link v-for="item in items" :key="item.label"
-        v-slot="{navigate,href}" :to="item.to" custom>
-        <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
-          <pv-button  :href="href" class="p-button-rounded p-button-text p-button-plain p-button-success"  @click="navigate" >
-            {{item.label}}
-          </pv-button>
-        </li>
+                     v-slot="{navigate,href}" :to="item.to" custom>
+          <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
+            <pv-button  :href="href" class="p-button-rounded p-button-text p-button-plain p-button-success"  @click="navigate" >
+              {{item.label}}
+            </pv-button>
+          </li>
         </router-link>
       </ul>
     </pv-sidebar>
