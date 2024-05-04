@@ -6,7 +6,7 @@ export default {
     return {
       drawer:false,
       items:[
-        {label:'Notificaciones', to: '/promos'},
+        {label:'Notificaciones', to: '/notifications'},
         {label:'Buscar rutas', to: '/promos'},
         {label:'Pagar pasaje', to: '/promos'},
         {label:'Promociones', to: '/promos'},
