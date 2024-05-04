@@ -20,7 +20,7 @@ export default {
       this.notificationService = new NotificationsApiService();
       this.notificationService.getAll()
           .then(response => {
-            this.notifications = response.data.notifications;
+            this.notifications = response.data;
             this.notifications = this.notifications.map(
                 (notification) => {
                   return Notification.toDisplayableNotification(notification)
