@@ -91,4 +91,7 @@ li Button{
 .p-button-success:active {
   background-color: #2e7d32;
 }
+.p-list-none{
+  margin-left: -35%;
+}
 </style>
