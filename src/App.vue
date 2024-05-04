@@ -1,18 +1,22 @@
 <script >
   import SideBar from "@/public/pages/side-bar.component.vue";
-
+  import SearchRoutes from "@/tracking/pages/search-routes.component.vue"
   export default {
     name: "App",
     title: "TrackMyRoute2",
-    components: {SideBar},
+    components: {SearchRoutes, SideBar},
   }
 </script>
 
 <template>
-  <div>
-    <side-bar></side-bar>
+  <div class="app-container">
+    <div class="sidebar-container">
+<!--      <side-bar></side-bar>-->
+    </div>
+    <div class="main-container">
+      <search-routes></search-routes>
+    </div>
   </div>
-
 </template>
 
 <style scoped>

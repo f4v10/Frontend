@@ -1,11 +1,18 @@
-<script setup>
-import Sidebar from 'primevue/sidebar';
-
+<script>
+  export default{
+    name: "side-bar.component",
+    title: "History",
+    data() {
+      return {
+        sidebarVisible: true
+      }
+    }
+  }
 </script>
 
 <template>
   <div class="container">
-    <Sidebar :visible="true" :showCloseIcon="false" class="p-sidebar-sm">
+    <pv-sidebar>
       <template #header>
         <h3 class="sidebar-title">TrackMyRoute</h3>
       </template>
@@ -51,7 +58,7 @@ import Sidebar from 'primevue/sidebar';
           </Button>
         </li>
       </ul>
-    </Sidebar>
+    </pv-sidebar>
   </div>
 </template>
 
