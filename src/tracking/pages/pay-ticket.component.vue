@@ -6,6 +6,10 @@ export default {
       selectedBus: null,
       selectedOrigin: null,
       selectedDestination: null,
+      typeBus: [
+        {name: 'Metropolitano' , code: 'MT'},
+        {name: 'Corredor azul' , code: 'CA'}
+      ],
       cities: [
         { name: 'New York', code: 'NY' },
         { name: 'Rome', code: 'RM' },
@@ -26,7 +30,7 @@ export default {
     <div class="form">
       <div class="select-field flex align-items-center justify-content-between">
         <p class="text-xl">Seleccionar Bus/Empresa de Transporte:</p>
-        <pv-dropdown v-model="selectedBus" editable :options="cities" optionLabel="name" placeholder="Selecciona Bus/Empresa" class="w-full md:w-20rem" />
+        <pv-dropdown v-model="selectedBus" editable :options="typeBus" optionLabel="name" placeholder="Selecciona Bus/Empresa" class="w-full md:w-20rem" />
       </div>
 
       <div class="select-field flex align-items-center justify-content-between">

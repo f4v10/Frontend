@@ -16,7 +16,7 @@ const router  = createRouter({
         {path: '/pay-ticket', component: PayTicketComponent, meta: {title: 'Pagar Pasaje'}},
         {path: '/search-routes', component: SearchRoutesComponent, meta: {title: 'Buscar Rutas'}},
         {path:'/support',component: SupportComponent,meta: {title: 'Support'}},
-        {path: '/', redirect: '/promos'},
+        {path: '/', redirect: '/search-routes'},
 
     ],
 });
