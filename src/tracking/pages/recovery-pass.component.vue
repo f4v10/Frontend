@@ -20,7 +20,7 @@ export default {
       this.userService = new UsersApiService();
       this.userService.getAllUsers()
           .then(response => {
-            this.users = response.data.users;
+            this.users = response.data;
             this.users = this.users.map(
                 (users) => {
                   return User.toDisplayableUser(users);
