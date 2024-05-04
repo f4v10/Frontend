@@ -26,7 +26,8 @@ export default {
 
 <template>
   <div class="container">
-    <pv-sidebar :visible="true" :showCloseIcon="false" class="p-sidebar-sm w-full md:w-20rem lg:w-30rem">
+    <pv- :visible="true" :showCloseIcon="true" class="p-sidebar-sm w-full md:w-20rem lg:w-30rem" >
+      <pv-button class="p-button-text text-white" icon="pi pi-bars" @click="toggleDrawer"/>
       <template #header>
         <h3 class="sidebar-title text-center w-full">TrackMyRoute</h3>
       </template>
@@ -40,7 +41,7 @@ export default {
           </li>
         </router-link>
       </ul>
-    </pv-sidebar>
+    </pv->
   </div>
   <router-view></router-view>
 </template>
