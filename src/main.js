@@ -15,11 +15,15 @@ import router from "@/router/index.js";
 //PrimeVue Components
 import DataTable from "primevue/datatable";
 import Column from "primevue/column";
+import Button from "primevue/button";
+import Sidebar from "primevue/sidebar";
 
 
 createApp(App)
     .use(PrimeVue, {ripple:true})
     .use(router)
     .component('pv-data-table', DataTable)
+    .component('pv-button', Button)
     .component('pv-column', Column)
+    .component('pv-sidebar', Sidebar)
     .mount('#app')

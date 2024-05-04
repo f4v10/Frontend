@@ -9,9 +9,8 @@
 </script>
 
 <template>
-  <div>
-    <side-bar></side-bar>
-  </div>
+
+  <side-bar></side-bar>
 
 </template>
 
