@@ -12,7 +12,7 @@ export default {
     }
   },
   created() {
-
+    this.initialize();
   },
   methods: {
     initialize() {
@@ -20,7 +20,7 @@ export default {
       this.notificationService = new NotificationsApiService();
       this.notificationService.getAll()
           .then(response => {
-            this.notifications = response.data;
+            this.notifications = response.data.notifications;
             this.notifications = this.notifications.map(
                 (notification) => {
                   return Notification.toDisplayableNotification(notification)
