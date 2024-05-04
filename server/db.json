@@ -27,15 +27,15 @@
   "promos": [
     {
       "id": 1,
-      "image": "url_a_la_imagen_de_la_promocion.jpg",
-      "title": "20% descuento en pasajes de Metropolitano",
-      "description": "Aprovecha el 20% de descuento en todos los pasajes del Metropolitano durante el mes de julio."
+      "title": "onetwo",
+      "description": "Aprovecha el 20% de descuento en todos los pasajes del Metropolitano durante el mes de julio.",
+      "image": "https://f.rpp-noticias.io/2022/07/14/1285880000745145wjpg.jpg"
     },
     {
       "id": 2,
-      "image": "url_a_la_imagen_de_la_promocion2.jpg",
       "title": "Viaje gratis en tu cumpleaños",
-      "description": "Regístrate y viaja gratis en cualquier transporte público en tu cumpleaños."
+      "description": "Regístrate y viaja gratis en cualquier transporte público en tu cumpleaños.",
+      "image": "https://larepublica.cronosmedia.glr.pe/original/2022/07/17/62d4465b89bf557dde504983.jpg"
     }
   ],
   "questions": [

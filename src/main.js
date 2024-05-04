@@ -20,6 +20,7 @@ import Sidebar from "primevue/sidebar";
 import Card from "primevue/card"
 import InputText from 'primevue/inputtext';
 
+
 createApp(App)
     .use(PrimeVue, {ripple:true})
     .use(router)
@@ -30,3 +31,4 @@ createApp(App)
     .component('pv-card',Card)
     .component('pv-inputtext',InputText)
     .mount('#app')
+
