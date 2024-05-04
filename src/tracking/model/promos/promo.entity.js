@@ -12,6 +12,7 @@ export class Promo {
             displayablePromo.title,
             displayablePromo.description);
     }
+
     static toDisplayablePromo(promo) {
             return {
                 id: promo.id,
