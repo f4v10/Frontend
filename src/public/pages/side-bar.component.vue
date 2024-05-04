@@ -1,26 +1,26 @@
 <script >
 export default {
-      name:'side-bar.component',
-      title:'SideBar',
-      data() {
-        return {
-          drawer:false,
-          items:[
-            {label:'Notificaciones', to: '/promos'},
-            {label:'Buscar rutas', to: '/promos'},
-            {label:'Pagar pasaje', to: '/promos'},
-            {label:'Promociones', to: '/promos'},
-            {label:'Historial de viajes', to: '/history'},
-            {label:'Soporte y ayuda', to: '/promos'},
-            {label:'Configuración', to: '/promos'},
-          ]
-        };
-      },
-      methods: {
-        toggleDrawer() {
-          this.drawer = !this.drawer;
-        }
-      }
+  name:'side-bar.component',
+  title:'SideBar',
+  data() {
+    return {
+      drawer:false,
+      items:[
+        {label:'Notificaciones', to: '/promos'},
+        {label:'Buscar rutas', to: '/promos'},
+        {label:'Pagar pasaje', to: '/promos'},
+        {label:'Promociones', to: '/promos'},
+        {label:'Historial de viajes', to: '/history'},
+        {label:'Soporte y ayuda', to: '/support'},
+        {label:'Configuración', to: '/config'},
+      ]
+    };
+  },
+  methods: {
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+    }
+  }
 }
 </script>
 
@@ -32,12 +32,12 @@ export default {
       </template>
       <ul class="p-list-none">
         <router-link v-for="item in items" :key="item.label"
-        v-slot="{navigate,href}" :to="item.to" custom>
-        <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
-          <pv-button  :href="href" class="p-button-rounded p-button-text p-button-plain p-button-success"  @click="navigate" >
-            {{item.label}}
-          </pv-button>
-        </li>
+                     v-slot="{navigate,href}" :to="item.to" custom>
+          <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
+            <pv-button  :href="href" class="p-button-rounded p-button-text p-button-plain p-button-success"  @click="navigate" >
+              {{item.label}}
+            </pv-button>
+          </li>
         </router-link>
       </ul>
     </pv-sidebar>
