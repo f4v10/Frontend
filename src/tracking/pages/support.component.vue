@@ -42,6 +42,7 @@
   width: 100%; /* Asegura que ocupe todo el espacio posible en su contenedor */
   background-color: #FFFFFF;
   border: 1px solid #000000;
+  color :black;
 }
 .search-input::placeholder {
   color: black; /* Color del placeholder */
