@@ -39,7 +39,7 @@ export default {
   </div>
   <div class="recov-pass-container" v-for="user in users">
     <p> Contraseña Actual : {{ user.password }} </p>
-    <input-text> Contraseña Nueva: </input-text>
+    <p><input type="text" placeholder="Contraseña Actual" v-model="actual password"> </p>
   </div>
 </template>
 
