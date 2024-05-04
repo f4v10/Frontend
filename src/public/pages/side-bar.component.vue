@@ -6,13 +6,13 @@ export default {
         return {
           drawer:false,
           items:[
-            {label:'Notificaciones', to: '/promos'},
-            {label:'Buscar rutas', to: '/promos'},
-            {label:'Pagar pasaje', to: '/promos'},
+            {label:'Notificaciones', to: '/notifications'},
+            {label:'Buscar rutas', to: '/search-routes'},
+            {label:'Pagar pasaje', to: '/pay-ticket'},
             {label:'Promociones', to: '/promos'},
             {label:'Historial de viajes', to: '/history'},
-            {label:'Soporte y ayuda', to: '/promos'},
-            {label:'Configuración', to: '/promos'},
+            {label:'Soporte y ayuda', to: '/support'},
+            {label:'Configuración', to: '/config'},
           ]
         };
       },
@@ -26,9 +26,9 @@ export default {
 
 <template>
   <div class="container">
-    <pv-sidebar :visible="true" :showCloseIcon="false" class="p-sidebar-sm">
+    <pv-sidebar :visible="true" :showCloseIcon="false" class="p-sidebar-sm w-full md:w-20rem lg:w-30rem">
       <template #header>
-        <h3 class="sidebar-title">TrackMyRoute</h3>
+        <h3 class="sidebar-title text-center w-full">TrackMyRoute</h3>
       </template>
       <ul class="p-list-none">
         <router-link v-for="item in items" :key="item.label"
@@ -49,16 +49,19 @@ export default {
 
 .container{
   height: 100%;
+  font-size: 32px;
 }
 
-.sidebar-title{
-  text-align: center;
-  font-size: 32px;
+.sidebar-title {
+  font-family: 'MuseoModerno', sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+  margin: 20px 0;
 }
 
 ul li{
   list-style: none;
-  margin: 50px
+  margin: 30px 0;
 }
 
 .p-sidebar-sm {
@@ -68,10 +71,11 @@ ul li{
 li Button{
   width: 300px;
   height: 50px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .p-button-success {
-  background-color: #4CAF50;
+  background-color: #0038FF;
   color: white;
   border: none;
   border-radius: 10px;
@@ -81,7 +85,7 @@ li Button{
 }
 
 .p-button-success:hover {
-  background-color: #3e8e41;
+  background-color: #1f4eff;
 }
 
 .p-button-success:focus {
@@ -89,7 +93,7 @@ li Button{
 }
 
 .p-button-success:active {
-  background-color: #2e7d32;
+  background-color: #1f4eff;
 }
 .p-list-none{
   margin-left: -35%;
