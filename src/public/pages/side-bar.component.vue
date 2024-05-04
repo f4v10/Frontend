@@ -1,6 +1,27 @@
-<script setup>
-import Sidebar from 'primevue/sidebar';
-
+<script >
+export default {
+  name:'side-bar.component',
+  title:'SideBar',
+  data() {
+    return {
+      drawer:false,
+      items:[
+        {label:'Notificaciones', to: '/promos'},
+        {label:'Buscar rutas', to: '/promos'},
+        {label:'Pagar pasaje', to: '/promos'},
+        {label:'Promociones', to: '/promos'},
+        {label:'Historial de viajes', to: '/history'},
+        {label:'Soporte y ayuda', to: '/promos'},
+        {label:'Configuración', to: '/promos'},
+      ]
+    };
+  },
+  methods: {
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+    }
+  }
+}
 </script>
 
 <template>
@@ -100,5 +121,9 @@ li Button{
 
 .p-button-success:active {
   background-color: #2e7d32;
+}
+
+.p-list-none{
+  margin-left: -35%;
 }
 </style>
