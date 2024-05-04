@@ -1,5 +1,6 @@
 <script>
 import {UsersApiService} from "@/tracking/services/users/users-api.service.js";
+import {User} from "@/tracking/model/users/user.entity.js";
 
 export default {
   name: "recovery-pass.component",
@@ -22,10 +23,11 @@ export default {
             this.users = response.data.users;
             this.users = this.users.map(
                 (users) => {
-                  return User.to
+                  return User.toDisplayableUser(users);
                 }
-            )
-          })
+            );
+            console.log(response.data)
+          });
     }
   }
 }
