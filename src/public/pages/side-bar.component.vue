@@ -1,58 +1,48 @@
-<script setup>
-import Sidebar from 'primevue/sidebar';
-
+<script >
+export default {
+  name:'side-bar.component',
+  title:'SideBar',
+  data() {
+    return {
+      drawer:false,
+      items:[
+        {label:'Notificaciones', to: '/promos'},
+        {label:'Buscar rutas', to: '/promos'},
+        {label:'Pagar pasaje', to: '/promos'},
+        {label:'Promociones', to: '/promos'},
+        {label:'Historial de viajes', to: '/history'},
+        {label:'Soporte y ayuda', to: '/promos'},
+        {label:'Configuración', to: '/promos'},
+      ]
+    };
+  },
+  methods: {
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+    }
+  }
+}
 </script>
 
 <template>
   <div class="container">
-    <Sidebar :visible="true" :showCloseIcon="false" class="p-sidebar-sm">
+    <pv-sidebar :visible="true" :showCloseIcon="false" class="p-sidebar-sm">
       <template #header>
         <h3 class="sidebar-title">TrackMyRoute</h3>
       </template>
       <ul class="p-list-none">
-        <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
-          <Button class="p-button-rounded p-button-text p-button-plain p-button-success">
-            <span>Notificaciones</span>
-          </Button>
-        </li>
-        <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
-          <Button class="p-button-rounded p-button-text p-button-plain p-button-success">
-            <span>Buscar rutas</span>
-          </Button>
-        </li>
-        <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
-          <Button class="p-button-rounded p-button-text p-button-plain p-button-success">
-            <span>Pagar pasaje</span>
-          </Button>
-        </li>
-        <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
-          <Button class="p-button-rounded p-button-text p-button-plain p-button-success">
-            <span>Promociones</span>
-          </Button>
-        </li>
-        <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
-          <Button class="p-button-rounded p-button-text p-button-plain p-button-success">
-            <span>Historial de viajes</span>
-          </Button>
-        </li>
-        <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
-          <Button class="p-button-rounded p-button-text p-button-plain p-button-success">
-            <span>Soporte y ayuda</span>
-          </Button>
-        </li>
-        <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
-          <Button class="p-button-rounded p-button-text p-button-plain p-button-success">
-            <span>Configuración</span>
-          </Button>
-        </li>
-        <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
-          <Button class="p-button-rounded p-button-text p-button-plain p-button-success">
-            <span>Cerrar sesión</span>
-          </Button>
-        </li>
+        <router-link v-for="item in items" :key="item.label"
+                     v-slot="{navigate,href}" :to="item.to" custom>
+          <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
+            <pv-button  :href="href" class="p-button-rounded p-button-text p-button-plain p-button-success"  @click="navigate" >
+              {{item.label}}
+            </pv-button>
+          </li>
+        </router-link>
       </ul>
-    </Sidebar>
+    </pv-sidebar>
   </div>
+  <router-view></router-view>
 </template>
 
 <style scoped>
