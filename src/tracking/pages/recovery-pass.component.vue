@@ -1,6 +1,12 @@
 <script>
 export default {
-  name: "recovery-pass.component"
+  name: "recovery-pass.component",
+  title: "Recovery Password",
+  data() {
+    return {
+      users: [],
+    }
+  }
 }
 </script>
 
