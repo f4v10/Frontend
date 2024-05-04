@@ -7,7 +7,7 @@ const router  = createRouter({
     routes : [
         {path: '/promos', component: PromosComponent, meta: {title: 'Promociones'}},
         {path: '/history', component: HistoryComponent, meta: {title: 'Historial de viajes'}},
-        {path: '/', redirect: '/home'},
+        {path: '/', redirect: '/promos'},
     ],
 });
 
