@@ -37,8 +37,9 @@ export default {
   <div class="recov-pass-header gap-2 align-items-center justify-content-between">
     <span class="m-0">Recovery Password</span>
   </div>
-  <div class="recov-pass-container">
-
+  <div class="recov-pass-container" v-for="user in users">
+    <p> Contraseña Actual : {{ user.password }} </p>
+    <input-text> Contraseña Nueva: </input-text>
   </div>
 </template>
 
