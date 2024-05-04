@@ -5,14 +5,11 @@
     name: "App",
     title: "TrackMyRoute2",
     components: {SideBar},
-
   }
 </script>
 
 <template>
-  <div>
     <side-bar></side-bar>
-  </div>
 
 </template>
 
