@@ -34,7 +34,12 @@ export default {
 </script>
 
 <template>
+  <div class="recov-pass-header gap-2 align-items-center justify-content-between">
+    <span class="m-0">Recovery Password</span>
+  </div>
+  <div class="recov-pass-container">
 
+  </div>
 </template>
 
 <style scoped>
