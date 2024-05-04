@@ -1,6 +1,7 @@
 <script>
 export default {
-  name: "notifications.component"
+  name: "notifications.component",
+  title: "Notifications",
 }
 </script>
 
