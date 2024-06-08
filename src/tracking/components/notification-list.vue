@@ -1,7 +1,7 @@
 <script>
 import NotificationCard from "@/tracking/components/notification-card.vue";
 export default {
-  name: "promo-list",
+  name: "notification-list",
   components: {NotificationCard},
   props: {
     nots: {
