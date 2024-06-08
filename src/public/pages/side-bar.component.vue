@@ -65,6 +65,26 @@ export default {
 }
 </script>
 
+<template>
+  <div class="container">
+    <pv-sidebar :visible="true" :showCloseIcon="false" class="p-sidebar-sm w-full md:w-20rem lg:w-30rem">
+      <template #header>
+        <h3 class="sidebar-title text-center w-full">TrackMyRoute</h3>
+      </template>
+      <ul class="p-list-none">
+        <router-link v-for="item in items" :key="item.label"
+        v-slot="{navigate,href}" :to="item.to" custom>
+        <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
+          <pv-button  :href="href" class="p-button-rounded p-button-text p-button-plain p-button-success"  @click="navigate" >
+            {{item.label}}
+          </pv-button>
+        </li>
+        </router-link>
+      </ul>
+    </pv-sidebar>
+  </div>
+  <router-view></router-view>
+</template>
 <style scoped>
 
 .container{
@@ -82,10 +102,12 @@ export default {
 ul li{
   list-style: none;
   margin: 30px 0;
+
 }
 
 li {
   list-style-type: none;
+
 }
 
 .p-sidebar-sm {
@@ -141,12 +163,11 @@ li Button{
 
 }
 
-
-
 .Register{
   background-color: #5b9aea;
 }
 .LogIn{
   background-color: #62c4cc;
+
 }
 </style>

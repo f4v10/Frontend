@@ -6,7 +6,6 @@ import PayTicketComponent from "@/tracking/pages/pay-ticket.component.vue";
 import SearchRoutesComponent from "@/tracking/pages/search-routes.component.vue";
 import SupportComponent from "@/tracking/pages/support.component.vue";
 
-
 const router  = createRouter({
     history: createWebHistory(),
     routes : [
