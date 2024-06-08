@@ -11,7 +11,7 @@ export class UsersApiService {
      * @returns {Promise<axios.AxiosResponse<any>>}
      */
     getAllUsers() {
-        return http.get("/users");
+        return http.get("/maintracking/users");
     }
 
     /**
@@ -20,6 +20,6 @@ export class UsersApiService {
      * @returns {Promise<axios.AxiosResponse<any>>}
      */
     getById(id) {
-        return http.get(`/users/${id}`);
+        return http.get(`/maintracking/users/${id}`);
     }
 }

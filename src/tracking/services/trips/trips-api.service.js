@@ -12,12 +12,12 @@ export class TripsApiService {
         */
 
         getAll() {
-            return http.get("/trips");
+            return http.get("/maintracking/trips");
         }
         getById(id) {
-            return http.get(`/trips/${id}`);
+            return http.get(`/maintracking/trips/${id}`);
         }
         findByTitle(title) {
-            return http.get(`/trips?title=${title}`);
+            return http.get(`/maintracking/trips?title=${title}`);
         }
 }

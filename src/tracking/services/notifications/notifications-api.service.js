@@ -11,7 +11,7 @@ export class NotificationsApiService {
      * @returns {Promise<axios.AxiosResponse<any>>}
      */
     getAll() {
-        return http.get("/notifications");
+        return http.get("/notifications/notifications");
     }
 
     /**
@@ -19,7 +19,7 @@ export class NotificationsApiService {
      * @returns {Promise<axios.AxiosResponse<any>>}
      */
     getById() {
-        return http.get(`/notifications/${id}`);
+        return http.get(`/notifications/notifications/${id}`);
     }
 
     /**
@@ -28,6 +28,6 @@ export class NotificationsApiService {
      * @returns {Promise<axios.AxiosResponse<any>>}
      */
     findById(id) {
-        return http.get(`/notifications?id=${id}`);
+        return http.get(`/notifications/notifications?id=${id}`);
     }
 }

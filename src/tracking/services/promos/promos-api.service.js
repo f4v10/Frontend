@@ -13,12 +13,12 @@ export class PromosApiService {
      */
 
     getAll() {
-        return http.get("/promos");
+        return http.get("/promos/promos");
     }
     getById(id) {
-        return http.get(`/promos/${id}`);
+        return http.get(`/promos/promos/${id}`);
     }
     findByTitle(title) {
-        return http.get(`/promos?title=${title}`);
+        return http.get(`/promos/promos?title=${title}`);
     }
 }
