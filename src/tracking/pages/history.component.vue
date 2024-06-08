@@ -53,15 +53,12 @@ export default {
 
     <template #header>
       <div class="table-header gap-2 align-items-center justify-content-between">
-        <h4 class="m-0">Manage Tutorials</h4>
+        <h4 class="m-0">Searching my routes</h4>
         <span class="p-input-icon-left">
             <i class="pi pi-search"/>
-          <!--  <pv-input-text v-model="filters['global'].value" placeholder="Search..."/> -->
           </span>
       </div>
     </template>
-    <pv-column :exportable="false" selectionMode="multiple" style="width: 3rem"/>
-    <pv-column :sortable="true" field="id" header="Id" style="min-width: 12rem"/>
     <pv-column :sortable="true" field="type" header="type" style="min-width: 16rem"/>
     <pv-column :sortable="true" field="origin" header="origin" style="min-width: 12rem"/>
     <pv-column :sortable="true" field="destination" header="destination" style="min-width: 16rem"/>

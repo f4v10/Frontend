@@ -1,3 +1,44 @@
+
+<template>
+  <div class="container">
+    
+    <pv- :visible="true" :showCloseIcon="true" class="p-sidebar-sm w-full md:w-20rem lg:w-30rem" >
+      <pv-button class="p-button-text text-white" icon="pi pi-bars" @click="toggleDrawer"/>
+      <template #header>
+        <h3 class="sidebar-title text-center w-full">TrackMyRoute</h3>
+      </template>
+      <ul class="p-list-none">
+        <router-link v-for="item in items" :key="item.label"
+                     v-slot="{navigate,href}" :to="item.to" custom>
+          <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
+            <pv-button  :href="href" class="p-button-rounded p-button-text p-button-plain p-button-success"  @click="navigate" >
+              {{item.label}}
+            </pv-button>
+          </li>
+        </router-link>
+      </ul>
+    </pv->
+
+    <div class="auth-container" style="position: absolute; top: 0;">
+      <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
+        <a target="_self" href="http://localhost:5174/signing">
+          <Button class="LogIn p-button-rounded p-button-text  p-button-success">Iniciar Sesion</Button>
+        </a>
+      </li>
+
+      <li class="p-p-2 p-d-flex p-flex-row p-ai-center p-jc-between">
+        <a target="_self" href="http://localhost:5174/register">
+          <!--          <Button class="LogIn p-button-rounded p-button-text p-button-plain p-button-success" @click="$router.push('/login')">Iniciar Sesion</Button>-->
+          <Button class="Register p-button-rounded p-button-text p-button-plain p-button-success">Registrate</Button>
+        </a>
+      </li>
+    </div>
+    
+    
+  </div>
+  <router-view></router-view>
+</template>
+
 <script >
 export default {
       name:'side-bar.component',
@@ -44,7 +85,6 @@ export default {
   </div>
   <router-view></router-view>
 </template>
-
 <style scoped>
 
 .container{
@@ -62,6 +102,12 @@ export default {
 ul li{
   list-style: none;
   margin: 30px 0;
+
+}
+
+li {
+  list-style-type: none;
+
 }
 
 .p-sidebar-sm {
@@ -85,7 +131,7 @@ li Button{
 }
 
 .p-button-success:hover {
-  background-color: #1f4eff;
+  background-color: #4b6def;
 }
 
 .p-button-success:focus {
@@ -93,6 +139,35 @@ li Button{
 }
 
 .p-button-success:active {
-  background-color: #1f4eff;
+  background-color: #6282f6;
+}
+.p-list-none{
+  margin-left: -35%;
+}
+.auth-container{
+
+  margin-left: 70%;
+}
+.LogIn{
+  margin-top: -0%;
+  margin-left: 0%;
+  width: 100px;
+  padding: 10px;
+
+}
+.Register{
+  margin-bottom: 100px;
+  margin-left: 0%;
+  width: 100px;
+  padding: 10px;
+
+}
+
+.Register{
+  background-color: #5b9aea;
+}
+.LogIn{
+  background-color: #62c4cc;
+
 }
 </style>
