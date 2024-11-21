@@ -1,30 +1,58 @@
 <script>
-import {Promo} from "@/tracking/model/promos/promo.entity.js";
 export default {
   name: "promo-card",
-  props: {promo:Promo}
-}
+  props: {
+    promo: {
+      type: Object,
+      required: true,
+    },
+  },
+};
 </script>
 
 <template>
-  <pv-card class="p-col-4 mt-4 mb-4 promo-card">
-    <template #header>
-      <img class="m-0" :alt="promo.name" :src="promo.image"></img>
-    </template>
-    <template #content>
-      <p class="m-0"> Title: {{ promo.title }} </p>
-      <p class="m-0"> Description: {{ promo.description }} </p>
-    </template>
-  </pv-card>
+  <div class="promo-card">
+    <img :src="promo.image" :alt="promo.title" class="promo-image" />
+    <div class="promo-details">
+      <h3>{{ promo.title }}</h3>
+      <p>{{ promo.description }}</p>
+    </div>
+  </div>
 </template>
 
 <style scoped>
 .promo-card {
-  width: 50%;
-  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.promo-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.promo-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.promo-details {
+  padding: 15px;
   text-align: center;
 }
-img {
-  width: 100%;
+
+h3 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1em;
+  color: #555;
 }
 </style>

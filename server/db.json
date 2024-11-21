@@ -6,7 +6,7 @@
     {
       "id": 1,
       "idUser": 3,
-      "type":"Metropolitano",
+      "type": "Metropolitano",
       "origin": "Av. La Marina, San Miguel",
       "destination": "Av. Larco, Miraflores",
       "startDate": "08:00",
@@ -16,14 +16,95 @@
     {
       "id": 2,
       "idUser": 4,
-      "type":"Corredor Azul",
+      "type": "Corredor Azul",
       "origin": "Av. Universitaria, Comas",
       "destination": "Jirón de la Unión, Lima",
       "startDate": "07:30",
       "endDate": "08:45",
       "price": 3.00
+    },
+    {
+      "id": 3,
+      "idUser": 5,
+      "type": "Corredor Rojo",
+      "origin": "Av. Javier Prado, San Isidro",
+      "destination": "Av. La Molina, La Molina",
+      "startDate": "06:15",
+      "endDate": "06:50",
+      "price": 3.50
+    },
+    {
+      "id": 4,
+      "idUser": 6,
+      "type": "Metropolitano",
+      "origin": "Estación Naranjal, Independencia",
+      "destination": "Estación Central, Cercado de Lima",
+      "startDate": "09:30",
+      "endDate": "10:15",
+      "price": 2.50
+    },
+    {
+      "id": 5,
+      "idUser": 7,
+      "type": "Corredor Morado",
+      "origin": "Av. Próceres de la Independencia, SJL",
+      "destination": "Av. Brasil, Jesús María",
+      "startDate": "07:00",
+      "endDate": "08:30",
+      "price": 3.00
+    },
+    {
+      "id": 6,
+      "idUser": 8,
+      "type": "Ruta Tradicional",
+      "origin": "Av. Los Héroes, San Juan de Miraflores",
+      "destination": "Av. Arequipa, Miraflores",
+      "startDate": "05:45",
+      "endDate": "06:30",
+      "price": 2.80
+    },
+    {
+      "id": 7,
+      "idUser": 9,
+      "type": "Corredor Azul",
+      "origin": "Av. Túpac Amaru, Carabayllo",
+      "destination": "Av. Petit Thouars, Lince",
+      "startDate": "08:20",
+      "endDate": "09:30",
+      "price": 3.50
+    },
+    {
+      "id": 8,
+      "idUser": 10,
+      "type": "Metropolitano",
+      "origin": "Estación Tomás Valle, SMP",
+      "destination": "Estación Ricardo Palma, Miraflores",
+      "startDate": "10:15",
+      "endDate": "11:10",
+      "price": 2.50
+    },
+    {
+      "id": 9,
+      "idUser": 11,
+      "type": "Corredor Rojo",
+      "origin": "Av. Angamos, Surco",
+      "destination": "Av. Canadá, La Victoria",
+      "startDate": "11:00",
+      "endDate": "11:45",
+      "price": 3.00
+    },
+    {
+      "id": 10,
+      "idUser": 12,
+      "type": "Ruta Tradicional",
+      "origin": "Av. Pachacútec, Villa María del Triunfo",
+      "destination": "Plaza Grau, Cercado de Lima",
+      "startDate": "12:00",
+      "endDate": "12:45",
+      "price": 2.70
     }
-  ],
+  ]
+,
   "promos": [
     {
       "id": 1,
@@ -36,6 +117,54 @@
       "title": "Viaje gratis en tu cumpleaños",
       "description": "Regístrate y viaja gratis en cualquier transporte público en tu cumpleaños.",
       "image": "https://larepublica.cronosmedia.glr.pe/original/2022/07/17/62d4465b89bf557dde504983.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Paga 3 y viaja 4",
+      "description": "Compra tres pasajes en rutas seleccionadas y obtén uno completamente gratis.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMcUjFt0bVzLUj8LXYmXQJOE0eTUt34F3Ztw&s"
+    },
+    {
+      "id": 4,
+      "title": "Descuento para estudiantes",
+      "description": "Obtén un descuento del 50% en todas las rutas si presentas tu carnet universitario.",
+      "image": "https://cdn.www.gob.pe/uploads/document/file/1618187/WhatsApp%20Image%202020-12-24%20at%208.08.15%20AM.jpeg.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "Primer viaje gratis",
+      "description": "Regístrate ahora y obtén tu primer viaje completamente gratis.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/BUS_BONITO_DE_LA_T.jpg/401px-BUS_BONITO_DE_LA_T.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Promoción Familiar",
+      "description": "Viaja en familia (mínimo 4 personas) y obtén un 30% de descuento en cada pasaje.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIPnW_tD-a7fQMSOVNpZbl4DYTrovmvw7SaJRBXIkPzB_CrujvgSU5x82Flsnv2dg4QWs&usqp=CAU"
+    },
+    {
+      "id": 7,
+      "title": "Días verdes",
+      "description": "Durante los lunes y viernes, obtén un 10% de descuento si pagas con tarjeta.",
+      "image": "https://elcomercio.pe/resizer/5V8lj8C2cwmWds1njrOcH4nwTcs=/1200x900/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/GABSUVVXPVGPBCSRXRH47H75QA.jpg "
+    },
+    {
+      "id": 8,
+      "title": "Doble puntos con Plin",
+      "description": "Paga tus pasajes con Plin y obtén puntos dobles para canjear por descuentos.",
+      "image": "https://bitool.co/imagenesTarjetaPersonal/1/5658/565820210506145050.png_thump.png"
+    },
+    {
+      "id": 9,
+      "title": "Noches de descuento",
+      "description": "Viaja después de las 10:00 PM y obtén un descuento del 15% en todas las rutas.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Ruta_IO52.jpg/800px-Ruta_IO52.jpg"
+    },
+    {
+      "id": 10,
+      "title": "Recarga y Gana",
+      "description": "Recarga más de S/20 y participa en el sorteo de un pase mensual gratuito.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/50/2017_Lima_-_Autob%C3%BAs_en_la_avenida_Alfonso_Ugarte_cerca_del_plaza_Dos_de_Mayo.jpg"
     }
   ],
   "questions": [

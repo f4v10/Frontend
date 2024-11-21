@@ -1,41 +1,58 @@
 <script>
-import {Promo} from "@/tracking/model/promos/promo.entity.js";
-import {PromosApiService} from "@/tracking/services/promos/promos-api.service.js";
+import axios from "axios";
 import PromoList from "@/tracking/components/promo-list.component.vue";
+
 export default {
   name: "promos.component",
-  title: 'Promos',
-  components: {PromoList},
-  data(){
+  components: { PromoList },
+  data() {
     return {
-      promos:[],
-      errors:[],
-    }
+      promos: [],
+      errors: [],
+    };
   },
-  created(){
+  created() {
     this.getPromos();
   },
   methods: {
-    buildPromoListFromResponseData(promos){
-      return promos.map(promo => new Promo(promo.id,promo.image, promo.title, promo.description));
+    async getPromos() {
+      try {
+        const response = await axios.get("http://localhost:3000/promos");
+        this.promos = response.data;
+      } catch (error) {
+        this.errors.push(error.message);
+      }
     },
-
-    getPromos(){
-      const apiService = new PromosApiService();
-      apiService.getAll()
-          .then(response=> {
-            this.promos = this.buildPromoListFromResponseData(response.data);
-          })
-          .catch(e=>this.errors.push(e))
-    }
-  }
-}
+  },
+};
 </script>
 
 <template>
-    <promo-list :promos="promos"/>
+  <div>
+    <h1>Promociones</h1>
+
+    <!-- Mensaje de Error -->
+    <div v-if="errors.length" class="error">
+      <p>Error al cargar promociones:</p>
+      <ul>
+        <li v-for="(error, index) in errors" :key="index">{{ error }}</li>
+      </ul>
+    </div>
+
+    <!-- Lista de Promociones -->
+    <promo-list :promos="promos" />
+  </div>
 </template>
 
 <style scoped>
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
 
+.error {
+  color: red;
+  text-align: center;
+  margin: 20px 0;
+}
 </style>

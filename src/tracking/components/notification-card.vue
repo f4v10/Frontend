@@ -1,26 +1,63 @@
-<script>
-import {Notification} from "@/tracking/model/notifications/notification.entity.js";
-export default {
-  name: "notification-card",
-  props: {nots:Notification}
-}
-</script>
-
 <template>
-  <pv-card class="p-col-4 mt-4 mb-4 nots-card">
-    <template #header>
-      <p class="m-0"> Title: {{ nots.title }} </p>
-    </template>
-    <template #content>
-      <p class="m-0"> Description: {{ nots.description }} </p>
-    </template>
-  </pv-card>
+  <div class="notification-card">
+    <h3 class="title">{{ notification.title }}</h3>
+    <p class="message">{{ notification.message }}</p>
+    <span class="date">{{ notification.date }}</span>
+    <button class="close-btn" @click="$emit('remove', notification.id)">✖</button>
+  </div>
 </template>
 
+<script>
+export default {
+  name: "NotificationCard",
+  props: {
+    notification: {
+      type: Object,
+      required: true,
+    },
+  },
+};
+</script>
+
 <style scoped>
-.nots-card {
-  width: 50%;
-  margin: auto;
-  text-align: center;
+.notification-card {
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.message {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.date {
+  font-size: 12px;
+  color: #666;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-btn:hover {
+  color: #ff0000;
 }
 </style>
